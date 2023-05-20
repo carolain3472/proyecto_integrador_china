@@ -1,12 +1,17 @@
 import {useForm} from 'react-hook-form'
 import {createuser} from '../api/register_api'
+import { useNavigate } from 'react-router-dom'
+
+
 
 export function Register_form() {
 
   const {register, handleSubmit} = useForm()
+  const navigate = useNavigate()
   const onSubmit =handleSubmit( async data=>{
-    const res= await createuser(data)
-    console.log(res)
+
+    await createuser(data)
+    navigate("/inicio")
   })
   return (
     <form onSubmit={onSubmit} >

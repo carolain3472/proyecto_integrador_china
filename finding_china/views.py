@@ -54,10 +54,19 @@ class Login(FormView):
             return super(Login,self).form_valid(form)
         
 class Logout(APIView):
-    def get(self,request, format = None):
-        request.user.auth_token.delete()
-        logout(request)
-        return Response(status = status.HTTP_200_OK)
+    def post(self, request, format=None):
+        username = request.data.get('username')
+
+        try:
+            # Buscar al usuario por nombre de usuario en la base de datos
+            user = CustomUser.objects.get(username=username)
+            
+            # Eliminar el token de acceso del usuario
+            Token.objects.filter(user=user).delete()
+            
+            return Response(status=status.HTTP_200_OK)
+        except CustomUser.DoesNotExist:
+            return Response(status=status.HTTP_404_NOT_FOUND)
     
 
 class LoginView(APIView):

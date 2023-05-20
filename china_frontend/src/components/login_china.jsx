@@ -4,6 +4,10 @@ import "bootstrap/dist/css/bootstrap.css";
 //import 'bootstrap/dist/css/bootstrap'
 import china_templo from '../images/login_china.jpg'; // Ruta relativa de la imagen
 
+const getStoredUsername = () => {
+  return sessionStorage.getItem("username");
+};
+
 
 export const Formulario = () => {
   const [username, setUsername] = useState("");
@@ -20,24 +24,23 @@ export const Formulario = () => {
   const handleSubmit = (event) => {
     event.preventDefault();
 
-    // Enviar la solicitud POST al backend
     axios
       .post("http://localhost:8000/china/login_view/", { username, password })
       .then((response) => {
-        // Manejar la respuesta del backend
         if (response.data.valid) {
-          // Redirigir a otra página
+          sessionStorage.setItem("username", username);
+          localStorage.setItem("authToken", response.data.token);
+
           window.location.href = "http://localhost:5173/next";
         } else {
-          // Mostrar un mensaje de error o realizar alguna otra acción en caso de respuesta negativa
-          console.log("No lo pudo validar");
+          console.log("No pudo validar el inicio de sesión");
         }
       })
       .catch((error) => {
-        // Manejar el error de la solicitud
         console.error(error);
       });
   };
+
 
   return (
     <section className="vh-100">
