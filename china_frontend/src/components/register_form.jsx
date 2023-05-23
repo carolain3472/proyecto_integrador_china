@@ -85,7 +85,7 @@ export function Register_form() {
                 <div className="text-center">
                   <Button
                     type="button"
-                    className="btn px-5 mb-5 w-100"
+                    className="btn btn-danger px-5 mb-5 w-100"
                     onClick={handleModalOpen}
                     disabled={!isFormComplete}
                   >
