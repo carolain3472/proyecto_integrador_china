@@ -3,7 +3,8 @@ import axios from "axios";
 import "bootstrap/dist/css/bootstrap.css";
 import "../scss/login_china_style.css";
 //import 'bootstrap/dist/css/bootstrap'
-import china_templo from "../images/login_china.jpg"; // Ruta relativa de la imagen
+import china_templo from "../images/login_logo.jpg"; // Ruta relativa de la imagen
+
 
 const getStoredUsername = () => {
   return sessionStorage.getItem("username");
@@ -29,6 +30,7 @@ export const Formulario = () => {
       .then((response) => {
         if (response.data.valid) {
           sessionStorage.setItem("username", username);
+          sessionStorage.setItem("email",response.data.user.email)
           localStorage.setItem("authToken", response.data.token);
 
           window.location.href = "http://localhost:5173/next";
@@ -55,7 +57,7 @@ export const Formulario = () => {
               >
                 <div className="text-center">
                   <img
-                    src="./src/images/login_logo.jpg"
+                    src={china_templo} 
                     className="img-fluid profile-image-pic img-thumbnail rounded-circle my-3"
                     width="200px"
                     alt="profile"

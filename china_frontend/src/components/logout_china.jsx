@@ -1,6 +1,7 @@
 import React from "react";
 import axios from "axios";
 
+
 export const Logout_china = () => {
   const handleLogout = () => {
     
@@ -12,6 +13,7 @@ export const Logout_china = () => {
       .then((response) => {
         console.log("Logout exitoso");
         sessionStorage.removeItem("username");
+        sessionStorage.removeItem("email");
         window.location.href = "http://localhost:5173/inicio";
         // Realizar cualquier acción adicional necesaria, como redirigir al usuario a la página de inicio de sesión.
  

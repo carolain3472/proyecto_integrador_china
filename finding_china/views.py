@@ -67,6 +67,40 @@ class Logout(APIView):
             return Response(status=status.HTTP_200_OK)
         except CustomUser.DoesNotExist:
             return Response(status=status.HTTP_404_NOT_FOUND)
+        
+class UpdateProfile(APIView):
+    def post(self, request):
+        username= request.data.get('username')
+        password= request.data.get('password')
+        #photo=
+        
+        try:
+            # Buscar al usuario por nombre de usuario en la base de datos
+            user = CustomUser.objects.get(username=username)
+
+            token_exists = Token.objects.filter(user=user).exists()
+
+            if token_exists:
+                if password:
+                    user.set_password(password)
+                    print("Nueva contraseña")
+                    print(password)
+                
+             #   if profile:
+             #       user.profilePic= profile
+            
+
+                user.save()
+                return Response(status=status.HTTP_200_OK)
+
+            else:
+                # El token no está asociado al usuario
+                return Response(status=status.HTTP_404_NOT_FOUND)
+
+
+        except CustomUser.DoesNotExist:
+            return Response(status=status.HTTP_404_NOT_FOUND)
+
     
 
 class LoginView(APIView):
@@ -85,7 +119,18 @@ class LoginView(APIView):
                 if user is not None:
                     login(request, user)
                     token, _ = Token.objects.get_or_create(user=user)
-                    return Response({'valid': True, 'token': token.key})
+
+        
+
+                    user_data = {
+                        'id': user.id,
+                        'username': user.username,
+                        'email': user.email,
+                        # Agrega más campos de información del usuario si es necesario
+                    }
+                  
+                
+                    return Response({'valid': True, 'token': token.key, 'user': user_data})
 
         except CustomUser.DoesNotExist:
             raise AuthenticationFailed('Las credenciales proporcionadas son inválidas.')

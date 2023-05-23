@@ -3,6 +3,7 @@ from .views import UsuariosList
 from rest_framework import routers
 from .views import LoginView
 from .views import RegisterUserView
+from .views import UpdateProfile
 
 
 from rest_framework.documentation import include_docs_urls
@@ -18,5 +19,6 @@ urlpatterns = [
     path('docs/', include_docs_urls(title="modulo API")),
     path('login_view/', LoginView.as_view(), name='login_view'),
     path('register/', RegisterUserView.as_view(), name='register'),
+    path('editProfile/' ,UpdateProfile.as_view(), name='editProfile'),
 
 ]
