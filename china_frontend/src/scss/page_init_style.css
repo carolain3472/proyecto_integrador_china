@@ -10,12 +10,35 @@
   display: flex;
   flex-direction: column;
   text-align: center;
+  align-items: center;
   font-family: "Noto Serif", serif;
 }
 
 .imagen-inicio {
-  background-color: rgb(212, 22, 212);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Noto Serif", serif;
 }
+
+.contenedor-carousel {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 75vh;
+  margin-top: 4rem;
+  width: calc(80% - 20px); /* Ajusta el valor del espaciado y el ancho total deseado */
+}
+
+.carousel-inner {
+  border-radius: 40px;
+}
+
+
+.carousel-item {
+  border-radius: 40px;
+}
+
 
 .titulo-container {
   display: inline-block;
@@ -30,8 +53,8 @@
   left: 50%;
   transform: translateX(-50%);
   bottom: 0;
-  width: 50%;
-  border-bottom: 3px solid black; /* Ajusta el color y el grosor del borde según tus necesidades */
+  width: 115%;
+  border-bottom: 8px solid black; /* Ajusta el color y el grosor del borde según tus necesidades */
 }
 
 .titulo {
@@ -112,6 +135,72 @@
   color: #000000;
   border: solid 2px #000000;
 }
+
+.encontrar {
+  margin-top: 10%;
+  display: flex;
+  justify-content: space-between;
+  height: auto;
+  width: auto;
+  border-radius: 30px;
+  background-color: #d1d1d1;
+  justify-content: center;
+  align-content: center;
+  padding-right: 30px;
+}
+
+.encontrar-izq {
+  margin-left: 50px;
+}
+
+.encontrar-der {
+  display: grid;
+  grid-template-rows: repeat(2, 50%);
+  width: auto;
+  height: auto;
+}
+
+.encontrar-arriba {
+  padding-top: 25px;
+  margin-right: 1px;
+}
+
+.encontrar-abajo {
+  margin-top: 20px;
+}
+
+.quiz,
+.info,
+.juegos {
+  font-family: "Noto Serif", serif;
+  font-weight: 100;
+  font-size: 13px;
+  color: #000000;
+  background-color: #ffffff;
+  padding: 5px 20px;
+  border: none;
+  box-shadow: rgb(0, 0, 0) 0px 0px 20px -6px;
+  border-radius: 6px;
+  transition: 1000ms;
+  transform: translateY(0);
+  align-items: center;
+  cursor: context-menu;
+  text-transform: uppercase;
+  margin-right: 10px;
+}
+
+.quiz:hover,
+.info:hover,
+.juegos:hover {
+  transition: 1000ms;
+  padding: 5px 30px;
+  transform: translateY(-9px);
+  background-color: #b0b0b0;
+  color: #ffffff;
+  border: solid 2px #ff553b;
+  cursor: context-menu;
+}
+
 
 /* Media Query para 1920px */
 @media screen and (max-width: 1920px) {
