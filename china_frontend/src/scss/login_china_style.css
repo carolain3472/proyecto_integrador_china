@@ -1,0 +1,56 @@
+.padre {
+    position: relative; 
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url("./src/images/fondo-login-china.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+.btn {
+    background-color: #E06469; 
+    color: #FFCCCC;
+}
+
+.btn:hover{
+    background-color: #FFCCCC;
+    color: #E06469;
+    
+}
+
+
+.profile-image-pic{
+  height: 200px;
+  width: 200px;
+  object-fit: cover;
+}
+
+
+.card {
+    background-color: rgba(255, 255, 255, 0.3);
+    border-radius: 10%;
+}
+
+.cardbody-color{
+    background-color: rgba(255, 255, 255, 0.3);
+    border-radius: 10%;
+}
+
+a{
+  text-decoration: none;
+}
+
+.registrarse {
+    font-weight: bold;
+    color: black;
+}
+
+.registrarse:hover {
+    font-weight: bold;
+    color: #E06469;
+}
