@@ -27,24 +27,22 @@
   justify-content: center;
   height: 75vh;
   margin-top: 4rem;
-  width: calc(80% - 20px); /* Ajusta el valor del espaciado y el ancho total deseado */
+  width: calc(80% - 20px);
 }
 
 .carousel-inner {
   border-radius: 40px;
 }
 
-
 .carousel-item {
   border-radius: 40px;
 }
-
 
 .titulo-container {
   display: inline-block;
   position: relative;
   margin-top: 10%;
-  margin-bottom: 10px; /* Margen inferior opcional para separar el contenido siguiente */
+  margin-bottom: 10px;
 }
 
 .titulo-container::after {
@@ -54,11 +52,11 @@
   transform: translateX(-50%);
   bottom: 0;
   width: 115%;
-  border-bottom: 8px solid black; /* Ajusta el color y el grosor del borde según tus necesidades */
+  border-bottom: 8px solid black;
 }
 
 .titulo {
-  margin: 0; /* Para eliminar el margen por defecto del h1 */
+  margin: 0;
   margin-bottom: 10%;
   font-size: 90px;
   font-weight: bolder;
@@ -102,9 +100,9 @@
 }
 
 .icono-registro {
-  width: 50px; /* Ajusta el ancho según el tamaño deseado */
-  height: 50px; /* Ajusta la altura según el tamaño deseado */
-  margin-left: 10px; /* Ajusta el margen según el espacio deseado entre el texto y el icono */
+  width: 50px;
+  height: 50px;
+  margin-left: 10px;
 }
 
 .boton-inicio {
@@ -199,51 +197,4 @@
   color: #ffffff;
   border: solid 2px #ff553b;
   cursor: context-menu;
-}
-
-
-/* Media Query para 1920px */
-@media screen and (max-width: 1920px) {
-  .titulo {
-    font-size: 80px; /* Ajusta el tamaño de fuente según tus necesidades */
-  }
-
-  .boton-registro {
-    font-size: 40px; /* Ajusta el tamaño de fuente según tus necesidades */
-    padding: 10px 30px; /* Ajusta el espacio interior según tus necesidades */
-  }
-
-  .boton-inicio {
-    font-size: 12px; /* Ajusta el tamaño de fuente según tus necesidades */
-    padding: 3px 15px; /* Ajusta el espacio interior según tus necesidades */
-  }
-}
-
-@media screen and (max-width: 720px) {
-  .inicio-design {
-    grid-template-columns: 100%;
-    grid-template-rows: auto 1fr;
-    height: auto;
-  }
-
-  .titulo {
-    font-size: 60px;
-    margin-bottom: 5%;
-  }
-
-  .boton-registro {
-    font-size: 30px;
-    padding: 10px 30px;
-  }
-
-  .icono-registro {
-    width: 30px;
-    height: 30px;
-    margin-left: 5px;
-  }
-
-  .boton-inicio {
-    font-size: 12px;
-    padding: 3px 15px;
-  }
 }

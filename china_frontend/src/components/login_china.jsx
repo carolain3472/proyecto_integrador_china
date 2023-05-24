@@ -5,7 +5,6 @@ import "../scss/login_china_style.css";
 //import 'bootstrap/dist/css/bootstrap'
 import china_templo from "../images/login_logo.jpg"; // Ruta relativa de la imagen
 
-
 const getStoredUsername = () => {
   return sessionStorage.getItem("username");
 };
@@ -13,6 +12,7 @@ const getStoredUsername = () => {
 export const Formulario = () => {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
+  const [loginError, setLoginError] = useState(false);
 
   const handleUsernameChange = (event) => {
     setUsername(event.target.value);
@@ -30,13 +30,14 @@ export const Formulario = () => {
       .then((response) => {
         if (response.data.valid) {
           sessionStorage.setItem("username", username);
-          sessionStorage.setItem("email",response.data.user.email)
+          sessionStorage.setItem("email", response.data.user.email);
           localStorage.setItem("authToken", response.data.token);
 
           window.location.href = "http://localhost:5173/next";
         } else {
-          console.log("No pudo validar el inicio de sesión");
-        }
+            setLoginError("Usuario o contraseña incorrectos");
+            console.log("No pudo validar el inicio de sesión");
+          }
       })
       .catch((error) => {
         console.error(error);
@@ -57,7 +58,7 @@ export const Formulario = () => {
               >
                 <div className="text-center">
                   <img
-                    src={china_templo} 
+                    src={china_templo}
                     className="img-fluid profile-image-pic img-thumbnail rounded-circle my-3"
                     width="200px"
                     alt="profile"
@@ -84,26 +85,32 @@ export const Formulario = () => {
                     placeholder="Password"
                   />
                 </div>
+                {loginError && (
+                  <div className="error-login text-center text-danger">
+                    {loginError}
+                  </div>
+                )}
                 <div className="text-center">
                   <button className="btn px-5 mb-5 w-100" type="submit">
                     Login
                   </button>
                 </div>
-                <div
-
-                  className="form-text text-center text-dark"
-                >
+                <div className="form-text text-center text-dark">
                   No estas registrado?{" "}
-                  <a className="registrarse" href="http://localhost:5173/register">
+                  <a
+                    className="registrarse"
+                    href="http://localhost:5173/register"
+                  >
                     {" "}
                     Crea una cuenta
                   </a>
                 </div>
-                <div
-                  className="form-text text-center text-dark"
-                >
+                <div className="form-text text-center text-dark">
                   Vuelta al menú?{" "}
-                  <a className="registrarse" href="http://localhost:5173/inicio">
+                  <a
+                    className="registrarse"
+                    href="http://localhost:5173/inicio"
+                  >
                     {" "}
                     Click aquí
                   </a>
@@ -116,5 +123,3 @@ export const Formulario = () => {
     </div>
   );
 };
-
-("");

@@ -4,6 +4,11 @@ import { Nav_bar } from "../components/nav-bar";
 import "../scss/page_init_style.css";
 import { Carousel } from "react-bootstrap";
 
+import encontrarImg from "../images/encontrar-img.png";
+import registroImg from "../images/registro.png";
+import temploCarousel1 from "../images/templo-carousel1.png";
+import temploCarousel2 from "../images/templo-carousel2.jpg";
+
 export function Page_init() {
   return (
     <>
@@ -22,7 +27,7 @@ export function Page_init() {
                 Registrarse
                 <img
                   className="icono-registro"
-                  src="../src/images/registro.png"
+                  src={registroImg}
                   alt="Registro"
                 />
               </button>
@@ -31,7 +36,7 @@ export function Page_init() {
           <div className="encontrar">
             <div className="encontrar-izq">
               <img
-                src="../src/images/encontrar-img.png"
+                src={encontrarImg}
                 className="img-fluid profile-image-pic img-thumbnail rounded-circle my-3"
                 width="200px"
                 alt="profile"
@@ -62,14 +67,14 @@ export function Page_init() {
               <Carousel.Item>
                 <img
                   className="d-block w-100"
-                  src="./src/images/templo-carousel1.png"
+                  src={temploCarousel1}
                   alt="First slide"
                 />
               </Carousel.Item>
               <Carousel.Item>
                 <img
                   className="d-block w-100"
-                  src="./src/images/templo-carousel2.jpg"
+                  src={temploCarousel2}
                   alt="Second slide"
                 />
               </Carousel.Item>

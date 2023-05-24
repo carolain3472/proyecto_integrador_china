@@ -1,0 +1,90 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;700&display=swap");
+
+.contenedor-next-padre {
+  display: grid;
+  grid-template-columns: repeat(3, 33%);
+  height: 100vh;
+  background-image: url("../images/fondo-next.jpeg");
+  height: 100vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.contenedor-next-hijo-izq {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  font-family: "Noto Serif", serif;
+}
+
+.contenedor-next-hijo-cent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-family: "Noto Serif", serif;
+}
+
+.contenedor-next-hijo-der {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-family: "Noto Serif", serif;
+}
+
+.parag-next {
+  padding: 15px;
+  background-color: rgba(255, 255, 255, 0.5);
+  font-size: 3rem;
+  font-weight: bolder;
+  margin-right: 20%;
+  border-radius: 10px;
+}
+
+.text-center {
+  margin-right: 15%;
+}
+
+.titulo-next {
+  color: #5c5c5c;
+  font-size: 3rem;
+  font-weight: bolder;
+  margin-right: 20%;
+  text-shadow: 0 0 5px #ccc, 0 0 10px #ccc, 0 0 20px #ccc, 0 0 30px #ccc,
+    0 0 40px #999, 0 0 50px #999, 0 0 60px #999, 0 0 70px #999, 0 0 80px #999;
+}
+
+.vamos {
+  margin-right: 13%;
+  margin-top: 80%;
+  font-family: "Noto Serif", serif;
+  font-weight: 0;
+  font-size: 40px;
+  color: #fff;
+  background-color: #272727;
+  padding: 40px 70px;
+  border: solid #000000 2px;
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 12px 28px 0px,
+    rgba(0, 0, 0, 0.1) 0px 2px 4px 0px,
+    rgba(255, 255, 255, 0.05) 0px 0px 0px 1px inset;
+  border-radius: 8px;
+  transition: 1000ms;
+  transform: translateY(0);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  cursor: pointer;
+}
+
+.vamos:hover {
+  font-size: 50px;
+  transition: 1000ms;
+  padding: 55px 90px;
+  transform: translateY(-0px);
+  background-color: #b0b0b0;
+  color: #000000;
+  border: solid 2px #000000;
+}

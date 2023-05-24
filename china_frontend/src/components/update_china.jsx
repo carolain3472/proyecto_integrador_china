@@ -32,7 +32,7 @@ export function Update_china() {
         navigate("/inicio");
       })
       .catch((error) => {
-        console.error("Error al realizar el logout", error);
+        console.error("Error al realizar el update", error);
       });
   };
 
