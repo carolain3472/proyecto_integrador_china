@@ -32,18 +32,18 @@ export function Register_form() {
   const isFormComplete = !!username && !!email && !!password;
 
   return (
-    <div className="padre">
-      <div className="container">
+    <div className="padre text-center">
+      <div className="container text-center">
         <div className="row">
           <div className="col-md-6 offset-md-3">
             <h1 className="text-center fw-bold mb-0">Finding China</h1>
             <h2 className="text-center fw-bold mb-0">寻找中国</h2>
-            <div className="card my-5">
+            <div className="card my-5 text-center">
               <form
                 className="card-body cardbody-color p-lg-5"
                 onSubmit={onSubmit}
               >
-                <div className="text-center">
+                <div>
                   <img
                     src="./src/images/login_logo.jpg"
                     className="img-fluid profile-image-pic img-thumbnail rounded-circle my-3"
@@ -53,36 +53,36 @@ export function Register_form() {
                 </div>
 
                 <div className="mb-3">
-                  <label htmlFor="username">Nombre de usuario:</label>
+                  <label htmlFor="username"></label>
                   <input
                     type="text"
-                    className="form-control form-control-lg"
+                    className="form-control"
                     id="username"
                     placeholder="Ingresa username"
                     {...register("username", { required: true })}
                   />
                 </div>
                 <div className="mb-3">
-                  <label htmlFor="email">Correo electrónico:</label>
+                  <label htmlFor="email"></label>
                   <input
                     type="email"
-                    className="form-control form-control-lg"
+                    className="form-control"
                     id="email"
                     placeholder="Ingresa Email"
                     {...register("email", { required: true })}
                   />
                 </div>
                 <div className="mb-3">
-                  <label htmlFor="password">Contraseña:</label>
+                  <label htmlFor="password"></label>
                   <input
                     type="password"
-                    className="form-control form-control-lg"
+                    className="form-control"
                     id="password"
                     placeholder="Ingresa contraseña"
                     {...register("password", { required: true })}
                   />
                 </div>
-                <div className="text-center">
+                <div>
                   <Button
                     type="button"
                     className="btn btn-danger px-5 mb-5 w-100"
@@ -104,20 +104,19 @@ export function Register_form() {
                     </Modal.Footer>
                   </Modal>
                 </div>
-                <div className="form-text text-center text-dark">
-                  Ya tienes cuenta?{" "}
+                <div className="form-text text-dark">
+                  Ya tienes cuenta?
                   <a className="registrarse" href="http://localhost:5173/login">
-                    {" "}
+                    
                     Inicia sesión
                   </a>
                 </div>
-                <div className="form-text text-center text-dark">
-                  Vuelta al menú?{" "}
+                <div className="form-text text-dark">
+                  Vuelta al menú?
                   <a
                     className="registrarse"
                     href="http://localhost:5173/inicio"
                   >
-                    {" "}
                     Click aquí
                   </a>
                 </div>

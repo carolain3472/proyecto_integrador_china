@@ -1,5 +1,4 @@
-import { Logout_china } from "../components/logout_china";
-import { Update_china } from "../components/update_china";
+import { Link } from "react-router-dom";
 import "../scss/next_styles.css";
 
 export function Next() {
@@ -28,7 +27,9 @@ export function Next() {
             />
           </div>
           <h1 className="titulo-next">Bienvenido {username}</h1>
-          <button className="vamos">¡Iniciemos!</button>
+          <Link to="/profile">
+            <button className="vamos">¡Iniciemos!</button>
+          </Link>
         </div>
 
         <div className="contenedor-next-hijo-der">
@@ -40,11 +41,5 @@ export function Next() {
         </div>
       </div>
     </>
-
-    /*       
-      <div>Next
-        <Update_china/>
-        <Logout_china/>
-    </div> */
   );
 }
