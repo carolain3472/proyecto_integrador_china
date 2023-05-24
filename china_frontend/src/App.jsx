@@ -4,6 +4,7 @@ import {Next} from './pages/Next'
 import {Register_template} from './pages/register_page'
 import {Page_init} from './pages/page_init'
 import {Logout_template} from './pages/logout_template'
+import {User_profile} from './pages/user_profile'
 
 
 
@@ -17,6 +18,7 @@ function App() {
       <Route path='/next' element ={<Next/>} />
       <Route path='/register' element ={<Register_template/>} />
       <Route path='/inicio' element ={<Page_init/>} />
+      <Route path='/profile' element ={<User_profile/>} />
     </Routes>
 
   </BrowserRouter>

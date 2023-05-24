@@ -45,18 +45,18 @@ export const Formulario = () => {
   };
 
   return (
-    <div className="padre">
-      <div className="container">
+    <div className="padre text-center">
+      <div className="container text-center">
         <div className="row">
-          <div className="col-md-6 offset-md-3">
+          <div className="col-md-6 offset-md-3 text-center">
             <h1 className="text-center fw-bold mb-0">Finding China</h1>
             <h2 className="text-center fw-bold mb-0">寻找中国</h2>
-            <div className="card my-5">
+            <div className="card my-5 text-center">
               <form
-                className="card-body cardbody-color p-lg-5"
+                className="card-body cardbody-color"
                 onSubmit={handleSubmit}
               >
-                <div className="text-center">
+                <div>
                   <img
                     src={china_templo}
                     className="img-fluid profile-image-pic img-thumbnail rounded-circle my-3"
@@ -68,7 +68,7 @@ export const Formulario = () => {
                 <div className="mb-3">
                   <input
                     id="form2Example18"
-                    className="form-control form-control-lg"
+                    className="form-control"
                     type="text"
                     value={username}
                     onChange={handleUsernameChange}
@@ -79,39 +79,37 @@ export const Formulario = () => {
                   <input
                     type="password"
                     id="form2Example28"
-                    className="form-control form-control-lg"
+                    className="form-control"
                     value={password}
                     onChange={handlePasswordChange}
                     placeholder="Password"
                   />
                 </div>
                 {loginError && (
-                  <div className="error-login text-center text-danger">
+                  <div className="error-login text-danger">
                     {loginError}
                   </div>
                 )}
-                <div className="text-center">
+                <div className="mb-3">
                   <button className="btn px-5 mb-5 w-100" type="submit">
                     Login
                   </button>
                 </div>
-                <div className="form-text text-center text-dark">
-                  No estas registrado?{" "}
+                <div className="form-text text-dark">
+                  No estas registrado?
                   <a
                     className="registrarse"
                     href="http://localhost:5173/register"
                   >
-                    {" "}
                     Crea una cuenta
                   </a>
                 </div>
-                <div className="form-text text-center text-dark">
-                  Vuelta al menú?{" "}
+                <div className="form-text text-dark">
+                  Vuelta al menú?
                   <a
                     className="registrarse"
                     href="http://localhost:5173/inicio"
                   >
-                    {" "}
                     Click aquí
                   </a>
                 </div>
