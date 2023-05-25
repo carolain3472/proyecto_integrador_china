@@ -3,7 +3,7 @@ import { Nav_bar_perfil } from "../components/nav-bar-perfil";
 import "../scss/user_profile_style.css";
 import "../scss/boton_toggler_style.css";
 
-export function User_profile() {
+export function Contribuciones() {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
 
   const toggleSidebar = () => {
@@ -32,10 +32,10 @@ export function User_profile() {
     className={`contenedor-perfil ${isSidebarOpen ? "open" : ""}`}
       >
         <div className="settings">
-          <h1 className="titulo-settings">Perfil</h1>
+          <h1 className="titulo-settings">Contribuciones</h1>
         </div>
         <div className="formulario-settings">
-          Perfil
+        Contribuciones
           
         </div>
       </main>

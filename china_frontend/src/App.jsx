@@ -8,6 +8,12 @@ import {User_profile} from './pages/user_profile'
 import {Sobre_nosotros} from './pages/sobre_nosotros'
 import {FAQ} from './pages/faq'
 import {Contacto} from './pages/contacto'
+import {Ajustes} from './pages/ajustes'
+import {Historia} from './pages/historia'
+import {Cultura} from './pages/cultura'
+import {Contribuciones} from './pages/contribuciones'
+import {Minijuegos} from './pages/minijuegos'
+
 
 
 
@@ -25,7 +31,11 @@ function App() {
       <Route path='/sobre-nosotros' element ={<Sobre_nosotros/>} />
       <Route path='/faq' element ={<FAQ/>} />
       <Route path='/contacto' element ={<Contacto/>} />
-
+      <Route path='/ajustes' element ={<Ajustes/>} />
+      <Route path='/historia' element ={<Historia/>} />
+      <Route path='/cultura' element ={<Cultura/>} />
+      <Route path='/contribuciones' element ={<Contribuciones/>} />
+      <Route path='/minijuegos' element ={<Minijuegos/>} />
     </Routes>
 
   </BrowserRouter>

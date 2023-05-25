@@ -27,6 +27,16 @@ export function Nav_bar_perfil() {
             <li className="nav-item custom-nav-item">
               <NavLink
                 exact
+                to="/profile"
+                className="nav-link custom-nav-link"
+                activeclassname="active"
+              >
+                Perfil
+              </NavLink>
+            </li>
+            <li className="nav-item custom-nav-item">
+              <NavLink
+                exact
                 to="/ajustes"
                 className="nav-link custom-nav-link"
                 activeclassname="active"
