@@ -1,0 +1,39 @@
+.boton-toggler {
+    background-color: transparent;
+    border: none;
+    margin-top: 2px;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    outline: none;
+    transition: background-color 0.3s, transform 0.3s;
+  }
+  
+  .boton-toggler span {
+    width: 30px;
+    height: 4px;
+    background-color: black;
+    margin-bottom: 5px;
+  }
+  
+  /* Estilos para el ícono de hamburguesa cuando el sidebar está abierto */
+  .boton-toggler.open span:nth-child(1) {
+    background-color: rgb(154, 154, 154); /* Cambiar el color */
+  }
+  
+  .boton-toggler.open span:nth-child(2) {
+    opacity: 0.5; /* Cambiar la opacidad */
+  }
+  
+  .boton-toggler.open span:nth-child(3) {
+    background-color: rgb(154, 154, 154); /* Cambiar el color */
+  }
+  
+  .sidebar {
+    /* Estilos del sidebar */
+    transition: transform 1s;
+  }
+  

@@ -1,9 +1,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;700&display=swap");
 
 .inicio-design {
+  margin-top: 64px;
   display: grid;
   grid-template-columns: repeat(2, 50%);
-  height: 100vh;
+  height: 90vh;
 }
 
 .informacion {
@@ -26,7 +27,6 @@
   align-items: center;
   justify-content: center;
   height: 75vh;
-  margin-top: 4rem;
   width: calc(80% - 20px);
 }
 
@@ -41,7 +41,6 @@
 .titulo-container {
   display: inline-block;
   position: relative;
-  margin-top: 10%;
   margin-bottom: 10px;
 }
 
