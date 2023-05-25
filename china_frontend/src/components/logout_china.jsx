@@ -1,5 +1,6 @@
 import React from "react";
 import axios from "axios";
+import "../scss/logout_boton_style.css"
 
 
 export const Logout_china = () => {
@@ -25,8 +26,6 @@ export const Logout_china = () => {
   };
 
   return (
-    <div>
-      <button onClick={handleLogout}>Logout</button>
-    </div>
+      <button className="boton-logout" onClick={handleLogout}>Logout</button>
   );
 };

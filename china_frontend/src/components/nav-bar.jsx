@@ -1,12 +1,12 @@
 import { Link } from "react-router-dom";
 import { NavLink } from "react-router-dom";
 import "../scss/nav_bar_style.css";
-import "../scss/page_init_style.css";
+
 
 export function Nav_bar() {
   return (
     <>
-      <nav className="navbar navbar-expand-sm navbar-light bg-light">
+      <nav className="navbar navbar-expand-sm navbar-light bg-light fixed-top">
         <a className="navbar-brand" href="#">
           <img
             src="../src/images/templo-chino.png"
