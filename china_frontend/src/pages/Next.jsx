@@ -3,7 +3,9 @@ import "../scss/next_styles.css";
 
 export function Next() {
   const username = sessionStorage.getItem("username");
-  const profilePic = sessionStorage.getItem("profile");
+  const profilePic = sessionStorage.getItem("foto");
+
+  console.log(profilePic)
 
   return (
     <>
@@ -18,7 +20,7 @@ export function Next() {
         <div className="contenedor-next-hijo-cent">
           <div>
             <img
-              src=" "
+              src={profilePic}
               className="img-fluid profile-image-pic img-thumbnail rounded-circle my-3"
               width="200px"
               alt="profile"

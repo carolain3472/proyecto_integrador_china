@@ -24,7 +24,7 @@ export function Nav_bar() {
           <ul className="navbar-nav ml-auto">
             <li className="nav-item">
               <NavLink
-                exact
+                exact="true"
                 to="/inicio"
                 className="nav-link"
                 activeclassname="active"

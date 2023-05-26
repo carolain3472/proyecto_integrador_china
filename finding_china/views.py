@@ -126,6 +126,7 @@ class LoginView(APIView):
                         'id': user.id,
                         'username': user.username,
                         'email': user.email,
+                        'profile_picture': user.profile_picture.url if user.profile_picture else None,
                         # Agrega más campos de información del usuario si es necesario
                     }
                   
@@ -143,9 +144,27 @@ class RegisterUserView(APIView):
 
     def post(self, request):
         serializer = UsuarioSerializer(data=request.data)
-        if serializer.is_valid():
-            user = CustomUser.objects.create_superuser(**serializer.validated_data)
-            user.is_staff = True
-            user.is_superuser = True
-            return Response({'success': True, 'message': 'Usuario registrado exitosamente'})
-        return Response(serializer.errors, status=400)
+        foto=  request.data.get("foto") 
+        username= request.data.get('nombre')
+        email= request.data.get('email1')
+        password= request.data.get('contraseña')
+
+        try:
+
+
+            print('Entró')
+            print(foto)
+            superuser = CustomUser.objects.create_superuser(
+                    username=username,
+                    password=password,
+                    email=email,
+                    profile_picture=foto
+        )
+        
+                #user = CustomUser.objects.create_superuser(**serializer.validated_data)
+            superuser.is_staff = True
+            superuser.is_superuser = True
+         
+            return Response(status=status.HTTP_200_OK)
+        except:
+             return Response(status=status.HTTP_404_NOT_FOUND)

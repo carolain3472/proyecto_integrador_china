@@ -1,5 +1,8 @@
 {
   "dependencies": {
-    "react-bootstrap": "^2.7.4"
+    "@react-three/drei": "^9.69.2",
+    "react-bootstrap": "^2.7.4",
+    "react-three-fiber": "^6.0.13",
+    "three": "^0.152.2"
   }
 }

@@ -11,7 +11,7 @@ import { faGamepad } from "@fortawesome/free-solid-svg-icons";
 
 export function Nav_bar_perfil() {
   const username = sessionStorage.getItem("username");
-  /*const profilePic = sessionStorage.getItem("profile");*/
+  const profilePic = sessionStorage.getItem("foto");
 
   return (
     <nav className="navbar navbar-light bg-light custom-sidebar">
@@ -19,8 +19,8 @@ export function Nav_bar_perfil() {
         <div className="navbar-brand align-top">
           <span className="navbar-text custom-navbar-brand">
             <img
-              src=" "
-              className="img-fluid profile-image-pic img-thumbnail rounded-circle my-3"
+              src={profilePic}
+              className="img-fluid profile-image-pic img-thumbnail my-3"
               width="100px"
               alt="profile"
             />
@@ -32,14 +32,14 @@ export function Nav_bar_perfil() {
           <ul className="navbar-nav custom-navbar-nav">
             <li className="nav-item custom-nav-item">
               <NavLink
-                exact
+                exact="true"
                 to="/profile"
                 className="nav-link custom-nav-link"
                 activeclassname="active"
               >
                 <FontAwesomeIcon
                   icon={faUser}
-                  size="md"
+                  size="sm"
                   className="icon-custom"
                   style={{marginRight: "15px" }}
                 />
@@ -48,14 +48,14 @@ export function Nav_bar_perfil() {
             </li>
             <li className="nav-item custom-nav-item">
               <NavLink
-                exact
+                exact="true"
                 to="/ajustes"
                 className="nav-link custom-nav-link"
                 activeclassname="active"
               >
                 <FontAwesomeIcon
                   icon={faUserGear}
-                  size="md"
+                  size="sm"
                   className="icon-custom"
                   style={{marginRight: "15px" }}
                 />
@@ -70,7 +70,7 @@ export function Nav_bar_perfil() {
               >
                 <FontAwesomeIcon
                   icon={faLandmark}
-                  size="md"
+                  size="sm"
                   className="icon-custom"
                   style={{marginRight: "15px" }}
                 />
@@ -85,7 +85,7 @@ export function Nav_bar_perfil() {
               >
                 <FontAwesomeIcon
                   icon={faPeopleRoof}
-                  size="md"
+                  size="sm"
                   className="icon-custom"
                   style={{marginRight: "15px" }}
                 />
@@ -100,7 +100,7 @@ export function Nav_bar_perfil() {
               >
                 <FontAwesomeIcon
                   icon={faHandHoldingHand}
-                  size="md"
+                  size="sm"
                   className="icon-custom"
                   style={{marginRight: "15px" }}
                 />
@@ -115,7 +115,7 @@ export function Nav_bar_perfil() {
               >
                 <FontAwesomeIcon
                   icon={faGamepad}
-                  size="md"
+                  size="sm"
                   className="icon-custom"
                   style={{marginRight: "15px" }}
                 />

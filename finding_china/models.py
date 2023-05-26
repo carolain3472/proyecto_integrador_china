@@ -10,7 +10,7 @@ class MyUserManager(BaseUserManager):
         if not username:
             raise ValueError('El nombre de usuario es requerido')
         if not email:
-            raise ValueError('El correo electrónico es requerido')
+            raise ValueError('El correo electrÃ³nico es requerido')
 
         user = self.model(username=username, email=email, **extra_fields)
         if password:
@@ -30,6 +30,7 @@ class CustomUser(AbstractUser):
 
     email = models.EmailField(null=False, unique=True, error_messages={
         'unique': 'Ya hay un usuario registrado con este email'})
+    profile_picture = models.ImageField(upload_to='profile_pictures/', default="https://cdn-icons-png.flaticon.com/512/105/105544.png", max_length=500)
     
     total_quiz = models.IntegerField(default=0)
     total_categorias = models.CharField(default=' ')
@@ -41,9 +42,7 @@ class CustomUser(AbstractUser):
     EMAIL_FIELD = 'email'
     
     REQUIRED_FIELDS = [
-   
         'email'
-
     ]
 
     def __str__(self):

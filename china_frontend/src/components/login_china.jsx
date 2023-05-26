@@ -30,8 +30,11 @@ export const Formulario = () => {
       .then((response) => {
         if (response.data.valid) {
           sessionStorage.setItem("username", username);
-          sessionStorage.setItem("email", response.data.user.email);
+          sessionStorage.setItem("email",response.data.user.email)
+          const fotoBack= decodeURIComponent(response.data.user.profile_picture)
+          sessionStorage.setItem("foto", fotoBack.substring(1));
           localStorage.setItem("authToken", response.data.token);
+          console.log(sessionStorage.getItem("foto"))
 
           window.location.href = "http://localhost:5173/next";
         } else {
