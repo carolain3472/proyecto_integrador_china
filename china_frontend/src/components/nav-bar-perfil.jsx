@@ -1,10 +1,17 @@
 import "../scss/nav_bar_perfil_style.css";
 import { Logout_china } from "../components/logout_china";
-import { Link } from "react-router-dom";
 import { NavLink } from "react-router-dom";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faLandmark } from "@fortawesome/free-solid-svg-icons";
+import { faUser } from "@fortawesome/free-solid-svg-icons";
+import { faUserGear } from "@fortawesome/free-solid-svg-icons";
+import { faPeopleRoof } from "@fortawesome/free-solid-svg-icons";
+import { faHandHoldingHand } from "@fortawesome/free-solid-svg-icons";
+import { faGamepad } from "@fortawesome/free-solid-svg-icons";
 
 export function Nav_bar_perfil() {
   const username = sessionStorage.getItem("username");
+  /*const profilePic = sessionStorage.getItem("profile");*/
 
   return (
     <nav className="navbar navbar-light bg-light custom-sidebar">
@@ -12,11 +19,10 @@ export function Nav_bar_perfil() {
         <div className="navbar-brand align-top">
           <span className="navbar-text custom-navbar-brand">
             <img
-              src="../src/images/templo-chino.png"
-              width="70"
-              height="70"
-              className="d-inline-block align-top"
-              alt=""
+              src=" "
+              className="img-fluid profile-image-pic img-thumbnail rounded-circle my-3"
+              width="100px"
+              alt="profile"
             />
             <br />
             {username}
@@ -31,6 +37,12 @@ export function Nav_bar_perfil() {
                 className="nav-link custom-nav-link"
                 activeclassname="active"
               >
+                <FontAwesomeIcon
+                  icon={faUser}
+                  size="md"
+                  className="icon-custom"
+                  style={{marginRight: "15px" }}
+                />
                 Perfil
               </NavLink>
             </li>
@@ -41,6 +53,12 @@ export function Nav_bar_perfil() {
                 className="nav-link custom-nav-link"
                 activeclassname="active"
               >
+                <FontAwesomeIcon
+                  icon={faUserGear}
+                  size="md"
+                  className="icon-custom"
+                  style={{marginRight: "15px" }}
+                />
                 Ajustes
               </NavLink>
             </li>
@@ -50,6 +68,12 @@ export function Nav_bar_perfil() {
                 className="nav-link custom-nav-link"
                 activeclassname="active"
               >
+                <FontAwesomeIcon
+                  icon={faLandmark}
+                  size="md"
+                  className="icon-custom"
+                  style={{marginRight: "15px" }}
+                />
                 Historia
               </NavLink>
             </li>
@@ -59,6 +83,12 @@ export function Nav_bar_perfil() {
                 className="nav-link custom-nav-link"
                 activeclassname="active"
               >
+                <FontAwesomeIcon
+                  icon={faPeopleRoof}
+                  size="md"
+                  className="icon-custom"
+                  style={{marginRight: "15px" }}
+                />
                 Cultura
               </NavLink>
             </li>
@@ -68,6 +98,12 @@ export function Nav_bar_perfil() {
                 className="nav-link custom-nav-link"
                 activeclassname="active"
               >
+                <FontAwesomeIcon
+                  icon={faHandHoldingHand}
+                  size="md"
+                  className="icon-custom"
+                  style={{marginRight: "15px" }}
+                />
                 Contribuciones
               </NavLink>
             </li>
@@ -77,6 +113,12 @@ export function Nav_bar_perfil() {
                 className="nav-link custom-nav-link"
                 activeclassname="active"
               >
+                <FontAwesomeIcon
+                  icon={faGamepad}
+                  size="md"
+                  className="icon-custom"
+                  style={{marginRight: "15px" }}
+                />
                 Minijuegos
               </NavLink>
             </li>

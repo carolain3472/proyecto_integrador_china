@@ -85,7 +85,7 @@ export function Register_form() {
                 <div>
                   <Button
                     type="button"
-                    className="btn btn-danger px-5 mb-5 w-100"
+                    className="btn btn-danger form-control mt-2"
                     onClick={handleModalOpen}
                     disabled={!isFormComplete}
                   >

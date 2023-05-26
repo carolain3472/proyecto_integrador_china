@@ -91,7 +91,7 @@ export const Formulario = () => {
                   </div>
                 )}
                 <div className="mb-3">
-                  <button className="btn px-5 mb-5 w-100" type="submit">
+                  <button className="btn form-control" type="submit">
                     Login
                   </button>
                 </div>
