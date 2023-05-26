@@ -71,8 +71,31 @@ class Logout(APIView):
 class UpdateProfile(APIView):
     def post(self, request):
         username= request.data.get('username')
+        profile= request.data.get('foto')
+        
+        try:
+            # Buscar al usuario por nombre de usuario en la base de datos
+            user = CustomUser.objects.get(username=username)
+            token_exists = Token.objects.filter(user=user).exists()
+
+            if token_exists:
+                user.profile_picture=profile
+                print(user.profile_picture)
+                user.save()
+                return Response(status=status.HTTP_200_OK)
+            else:
+                # El token no está asociado al usuario
+                return Response(status=status.HTTP_404_NOT_FOUND)
+
+
+        except CustomUser.DoesNotExist:
+            return Response(status=status.HTTP_404_NOT_FOUND)
+        
+
+class UpdateContraseña(APIView):
+    def post(self, request):
+        username= request.data.get('username')
         password= request.data.get('password')
-        #photo=
         
         try:
             # Buscar al usuario por nombre de usuario en la base de datos
@@ -81,18 +104,11 @@ class UpdateProfile(APIView):
             token_exists = Token.objects.filter(user=user).exists()
 
             if token_exists:
-                if password:
-                    user.set_password(password)
-                    print("Nueva contraseña")
-                    print(password)
-                
-             #   if profile:
-             #       user.profilePic= profile
-            
-
+                user.set_password(password)
+                print("Nueva contraseña")
+                print(password)
                 user.save()
                 return Response(status=status.HTTP_200_OK)
-
             else:
                 # El token no está asociado al usuario
                 return Response(status=status.HTTP_404_NOT_FOUND)
