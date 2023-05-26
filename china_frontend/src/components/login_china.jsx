@@ -1,8 +1,10 @@
 import React, { useState } from "react";
 import axios from "axios";
 import "bootstrap/dist/css/bootstrap.css";
+import { useNavigate } from "react-router-dom";
 import "../scss/login_china_style.css";
 //import 'bootstrap/dist/css/bootstrap'
+import { api } from "../api/register_api";
 import china_templo from "../images/login_logo.jpg"; // Ruta relativa de la imagen
 
 const getStoredUsername = () => {
@@ -13,6 +15,7 @@ export const Formulario = () => {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const [loginError, setLoginError] = useState(false);
+  const navigate = useNavigate();
 
   const handleUsernameChange = (event) => {
     setUsername(event.target.value);
@@ -26,7 +29,7 @@ export const Formulario = () => {
     event.preventDefault();
 
     axios
-      .post("http://localhost:8000/china/login_view/", { username, password })
+    api.post("/china/login_view/", { username, password })
       .then((response) => {
         if (response.data.valid) {
           sessionStorage.setItem("username", username);
@@ -35,8 +38,7 @@ export const Formulario = () => {
           sessionStorage.setItem("foto", fotoBack.substring(1));
           localStorage.setItem("authToken", response.data.token);
           console.log(sessionStorage.getItem("foto"))
-
-          window.location.href = "http://localhost:5173/next";
+          navigate("/next");
         } else {
             setLoginError("Usuario o contraseña incorrectos");
             console.log("No pudo validar el inicio de sesión");
@@ -45,6 +47,14 @@ export const Formulario = () => {
       .catch((error) => {
         console.error(error);
       });
+  };
+
+  const redireccionarRegistro= () => {
+    navigate('/register'); // Redireccionar a la página de registro
+  };
+
+  const redireccionarInicio= () => {
+    navigate('/inicio'); // Redireccionar a la página de registro
   };
 
   return (
@@ -102,7 +112,8 @@ export const Formulario = () => {
                   No estas registrado?
                   <a
                     className="registrarse"
-                    href="http://localhost:5173/register"
+
+                    onClick={redireccionarRegistro}
                   >
                     Crea una cuenta
                   </a>
@@ -111,7 +122,7 @@ export const Formulario = () => {
                   Vuelta al menú?
                   <a
                     className="registrarse"
-                    href="http://localhost:5173/inicio"
+                    onClick={redireccionarInicio} //cambiarlo a navigate
                   >
                     Click aquí
                   </a>

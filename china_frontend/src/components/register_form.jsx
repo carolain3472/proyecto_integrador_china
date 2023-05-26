@@ -88,6 +88,14 @@ export function Register_form() {
     sessionStorage.setItem("foto", selectedImage )
   };
 
+  const redireccionarLogin= () => {
+    navigate('/login'); // Redireccionar a la página de registro
+  };
+
+  const redireccionarInicio= () => {
+    navigate('/inicio'); // Redireccionar a la página de registro
+  };
+
   return (
     <div className="padre text-center">
       <div className="container text-center">
@@ -213,7 +221,7 @@ export function Register_form() {
                 </div>
                 <div className="form-text text-dark">
                   Ya tienes cuenta?
-                  <a className="registrarse" href="http://localhost:5173/login">
+                  <a className="registrarse" onClick={redireccionarLogin}> {/* navigate */}
                     
                     Inicia sesión
                   </a>
@@ -222,8 +230,8 @@ export function Register_form() {
                   Vuelta al menú?
                   <a
                     className="registrarse"
-                    href="http://localhost:5173/inicio"
-                  >
+                    onClick={redireccionarInicio}
+                  > {/* navigate */}
                     Click aquí
                   </a>
                 </div>
