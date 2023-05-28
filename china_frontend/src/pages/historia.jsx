@@ -41,6 +41,19 @@ export function Historia() {
         <div className="settings">
           <h1 className="titulo-settings">Historia</h1>
         </div>
+
+        <div className="formulario-settings"
+          style={{
+            width: "100%",
+            height: "100%",
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+            marginTop: "100px",
+          }}
+        >
+          <img src="/images/historia-mock.png" alt="Foto" />
+        </div>
   
       </main>
       </>

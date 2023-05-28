@@ -47,9 +47,17 @@ export function Contribuciones() {
         <div className="settings">
           <h1 className="titulo-settings">Contribuciones</h1>
         </div>
-        <div className="formulario-settings">
-        Contribuciones
-          
+        <div className="formulario-settings"
+          style={{
+            width: "100%",
+            height: "100%",
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+            marginTop: "100px",
+          }}
+        >
+          <img src="/images/contribuciones-mock.png" alt="Foto" />
         </div>
       </main>
     </>

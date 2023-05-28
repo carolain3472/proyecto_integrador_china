@@ -38,13 +38,22 @@ export function Cultura() {
     style={{ marginLeft: isSidebarOpen ? "310px" : "0" }}
     className={`contenedor-perfil ${isSidebarOpen ? "open" : ""}`}
       >
-        <div className="cultura">
-          <h1 className="titulo-cultura">Cultura</h1>
+        <div className="settings">
+          <h1 className="titulo-settings">Cultura</h1>
         </div>
-        <div className="formulario-settings">
-          Cultura
-          
+        <div className="formulario-settings"
+          style={{
+            width: "100%",
+            height: "100%",
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+            marginTop: "100px",
+          }}
+        >
+          <img src="/images/cultura-mock.png" alt="Foto" />
         </div>
+
       </main>
     </>
   );
