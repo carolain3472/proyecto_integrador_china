@@ -3,13 +3,20 @@ import axios from "axios";
 import "bootstrap/dist/css/bootstrap.css";
 import { useNavigate } from "react-router-dom";
 import "../scss/login_china_style.css";
-//import 'bootstrap/dist/css/bootstrap'
 import { api } from "../api/register_api";
-import china_templo from "../images/login_logo.jpg"; // Ruta relativa de la imagen
 
+
+/**
+ * Obtiene el nombre de usuario almacenado en sessionStorage.
+ * @returns {string | null} El nombre de usuario almacenado, o null si no hay ninguno.
+ */
 const getStoredUsername = () => {
   return sessionStorage.getItem("username");
 };
+
+/**
+ * Componente Formulario para el inicio de sesión.
+ */
 
 export const Formulario = () => {
   const [username, setUsername] = useState("");
@@ -17,20 +24,36 @@ export const Formulario = () => {
   const [loginError, setLoginError] = useState(false);
   const navigate = useNavigate();
 
+  /**
+  * Maneja el cambio en el campo de nombre de usuario.
+  * @param {Object} event - El evento de cambio del campo de nombre de usuario.
+  */
   const handleUsernameChange = (event) => {
     setUsername(event.target.value);
   };
 
+  /**
+  * Maneja el cambio en el campo de contraseña.
+  * @param {Object} event - El evento de cambio del campo de contraseña.
+  */
   const handlePasswordChange = (event) => {
     setPassword(event.target.value);
   };
 
+  /**
+  * Maneja el envío del formulario de inicio de sesión.
+  * Realiza una solicitud de inicio de sesión al servidor y almacena los datos de usuario y token de 
+  * autenticación.
+  * Navega a la página "/next" en caso de éxito.
+  * @param {Object} event - El evento de envío del formulario.
+  */
   const handleSubmit = (event) => {
     event.preventDefault();
-
+    // Realiza una solicitud POST al servidor para el inicio de sesión
     axios
     api.post("/china/login_view/", { username, password })
       .then((response) => {
+        // Cuando la solicitud es exitosa
         if (response.data.valid) {
           sessionStorage.setItem("username", username);
           sessionStorage.setItem("email",response.data.user.email)
@@ -49,12 +72,18 @@ export const Formulario = () => {
       });
   };
 
+  /**
+  * Redirecciona al usuario a la página de registro.
+  */
   const redireccionarRegistro= () => {
-    navigate('/register'); // Redireccionar a la página de registro
+    navigate('/register'); 
   };
 
+  /**
+  * Redireccionar a la página de registro
+  */
   const redireccionarInicio= () => {
-    navigate('/inicio'); // Redireccionar a la página de registro
+    navigate('/'); 
   };
 
   return (
@@ -71,7 +100,7 @@ export const Formulario = () => {
               >
                 <div>
                   <img
-                    src={china_templo}
+                    src="/images/login_logo.jpg"
                     className="img-fluid profile-image-pic img-thumbnail rounded-circle my-3"
                     width="200px"
                     alt="profile"
@@ -122,7 +151,7 @@ export const Formulario = () => {
                   Vuelta al menú?
                   <a
                     className="registrarse"
-                    onClick={redireccionarInicio} //cambiarlo a navigate
+                    onClick={redireccionarInicio} 
                   >
                     Click aquí
                   </a>

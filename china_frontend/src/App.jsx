@@ -6,7 +6,7 @@ import {Page_init} from './pages/page_init'
 import {Logout_template} from './pages/logout_template'
 import {User_profile} from './pages/user_profile'
 import {Sobre_nosotros} from './pages/sobre_nosotros'
-import {FAQ} from './pages/faq'
+import {FYI} from './pages/fyi'
 import {Contacto} from './pages/contacto'
 import {Ajustes} from './pages/ajustes'
 import {Historia} from './pages/historia'
@@ -26,10 +26,10 @@ function App() {
       <Route path='/logout' element ={<Logout_template/>} />
       <Route path='/next' element ={<Next/>} />
       <Route path='/register' element ={<Register_template/>} />
-      <Route path='/inicio' element ={<Page_init/>} />
+      <Route path='/' element ={<Page_init/>} />
       <Route path='/profile' element ={<User_profile/>} />
       <Route path='/sobre-nosotros' element ={<Sobre_nosotros/>} />
-      <Route path='/faq' element ={<FAQ/>} />
+      <Route path='/fyi' element ={<FYI/>} />
       <Route path='/contacto' element ={<Contacto/>} />
       <Route path='/ajustes' element ={<Ajustes/>} />
       <Route path='/historia' element ={<Historia/>} />

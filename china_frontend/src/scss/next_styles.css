@@ -1,12 +1,24 @@
 @import url("https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;700&display=swap");
 
+.container-fluid {
+  background-image: url("../images/fondo-next.jpeg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  min-height: 100vh;
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Noto Serif", serif;
+}
+
 .contenedor-next-padre {
   display: grid;
   grid-template-columns: repeat(3, 33%);
   height: 100vh;
-  background-image: url("../images/fondo-next.jpeg");
-  background-repeat: no-repeat;
-  background-size: cover;
+
 }
 
 .contenedor-next-hijo-izq {
@@ -18,37 +30,24 @@
 }
 
 .contenedor-next-hijo-cent {
-  padding-top: 10px;
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
-  font-family: "Noto Serif", serif;
-}
-
-.contenedor-next-hijo-der {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-family: "Noto Serif", serif;
 }
 
 .parag-next {
-  padding: 15px;
   background-color: rgba(255, 255, 255, 0.5);
   font-size: 3rem;
   font-weight: bolder;
-  margin-right: 10%;
   border-radius: 10px;
+  width: 500px;
+
 }
 
-.text-center {
-  margin-right: 15%;
-}
 
 .titulo-next {
-  margin-bottom: 80%;
+  margin-bottom: 50%;
   color: #5c5c5c;
   font-size: 3rem;
   font-weight: bolder;

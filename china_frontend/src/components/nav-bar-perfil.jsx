@@ -9,7 +9,15 @@ import { faPeopleRoof } from "@fortawesome/free-solid-svg-icons";
 import { faHandHoldingHand } from "@fortawesome/free-solid-svg-icons";
 import { faGamepad } from "@fortawesome/free-solid-svg-icons";
 
+
+/**
+ * Componente de barra de navegación del perfil.
+ * Muestra el nombre de usuario y la imagen de perfil del usuario actual.
+ * Contiene enlaces a diferentes secciones del perfil.
+ */
 export function Nav_bar_perfil() {
+  
+  // Obtener el nombre de usuario y la imagen de perfil almacenados en el almacenamiento de sesión
   const username = sessionStorage.getItem("username");
   const profilePic = sessionStorage.getItem("foto");
 

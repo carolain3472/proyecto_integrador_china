@@ -1,0 +1,95 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;700&display=swap");
+
+.contenedor-FYI {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  font-family: "Noto Serif", serif;
+  padding-bottom: 10px;
+}
+
+.contenedor-hijo-FYI-izq {
+    margin-bottom: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    width: 50%;
+    border-top-left-radius: 125px;
+    border-bottom-left-radius: 120px;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    box-shadow: -4px 4px 7px rgba(0, 0, 0, 0.4);
+    transition: transform 0.3s;
+}
+
+.contenedor-hijo-FYI-izq img{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 200px;
+    width: 200px;
+    border-radius: 50%;
+}
+
+.contenedor-hijo-FYI-izq p{
+    padding-left: 9px;
+    padding-right: 9px;
+}
+
+.contenedor-hijo-FYI-der {
+    margin-bottom: 10px;
+    background-color: rgba(240, 139, 139, 0.2);
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    width: 50%;
+    border-top-right-radius: 120px;
+    border-bottom-right-radius: 120px;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    box-shadow: 4px 4px 7px rgba(0, 0, 0, 0.4);
+    transition: transform 0.3s;
+}
+
+.contenedor-hijo-FYI-der img{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 200px;
+    width: 200px;
+    border-radius: 50%;
+    
+}
+
+.contenedor-hijo-FYI-der p{
+    padding-left: 9px;
+    padding-right: 9px;
+}
+
+.contenedor-hijo-FYI-der:hover,
+.contenedor-hijo-FYI-izq:hover {
+    transform: scale(1.05);
+}
+
+.titulo-imagen-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .titulo-FYI {
+    margin-top: 45px;
+    margin-right: 10px;
+  }
+  
+  .icono-confundido {
+    width: 100px;
+    height: 100px;
+  }
+  

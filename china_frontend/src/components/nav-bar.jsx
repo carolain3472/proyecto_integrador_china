@@ -2,6 +2,11 @@ import { Link } from "react-router-dom";
 import { NavLink } from "react-router-dom";
 import "../scss/nav_bar_style.css";
 
+/**
+ * Componente de barra de navegación principal.
+ * Muestra el logotipo y los enlaces a diferentes secciones del sitio web.
+ * También incluye un enlace para iniciar sesión.
+*/
 
 export function Nav_bar() {
   return (
@@ -9,7 +14,7 @@ export function Nav_bar() {
       <nav className="navbar navbar-expand-sm navbar-light bg-light fixed-top">
         <a className="navbar-brand" href="#">
           <img
-            src="../src/images/templo-chino.png"
+            src="/images/templo-chino.png"
             width="30"
             height="30"
             className="d-inline-block align-top"
@@ -25,7 +30,7 @@ export function Nav_bar() {
             <li className="nav-item">
               <NavLink
                 exact="true"
-                to="/inicio"
+                to="/"
                 className="nav-link"
                 activeclassname="active"
               >
@@ -42,8 +47,8 @@ export function Nav_bar() {
               </NavLink>
             </li>
             <li className="nav-item">
-              <NavLink to="/faq" className="nav-link" activeclassname="active">
-                FAQ
+              <NavLink to="/fyi" className="nav-link" activeclassname="active">
+                FYI
               </NavLink>
             </li>
             <li className="nav-item">

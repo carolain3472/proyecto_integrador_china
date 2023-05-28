@@ -6,6 +6,13 @@ import "../scss/boton_toggler_style.css";
 export function Historia() {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
 
+  /**
+   * Alternar la apertura y cierre de la barra lateral.
+   * 
+   * Esta función cambia el estado de la variable 'isSidebarOpen' para controlar
+   * si la barra lateral está abierta o cerrada. Si la barra lateral está abierta,
+   * la función la cerrará y viceversa.
+   */
   const toggleSidebar = () => {
     setIsSidebarOpen(!isSidebarOpen);
   };
@@ -28,16 +35,14 @@ export function Historia() {
         </div>
       )}
       <main
-    style={{ marginLeft: isSidebarOpen ? "310px" : "0" }}
-    className={`contenedor-perfil ${isSidebarOpen ? "open" : ""}`}
+        style={{ marginLeft: isSidebarOpen ? "310px" : "0" }}
+        className={`contenedor-perfil ${isSidebarOpen ? "open" : ""}`}
       >
         <div className="settings">
           <h1 className="titulo-settings">Historia</h1>
         </div>
-        <div className="formulario-settings">
-          Historia
-        </div>
+  
       </main>
-    </>
+      </>
   );
 }

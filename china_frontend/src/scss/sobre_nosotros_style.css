@@ -1,0 +1,71 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;700&display=swap");
+
+.contenedor-aboutUs {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    font-family: "Noto Serif", serif;
+}
+
+.contenedor-hijo-aboutUs {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contenedor-aboutUs div:nth-child(2) .aboutUs-p {
+    background-color: rgba(194, 194, 194, 0.4);
+    border-radius: 10px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4);
+    font-size: 1.7rem;  
+    margin-top: 10px;
+    padding: 20px;
+    text-align: center;
+    width: 50%;
+}
+
+.team-aboutUs {
+    font-size: 2rem;
+    font-weight: bold;
+    text-align: center;
+    text-transform: uppercase;  
+}
+
+.contenedor-imagenes{
+    display: flex;
+    justify-content: space-between;
+    width: 50%;
+}
+
+
+.tarjeta {
+    position: relative;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    margin: 10px;
+    padding: 5px;
+    text-align: center;
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centra el contenido horizontalmente */
+    transition: transform 0.3s;
+}
+
+.tarjeta:hover {
+    transform: scale(1.05);
+}
+
+.tarjeta img {
+    width: 100%;
+    height: 70%; /* Ajusta la altura automáticamente */
+    border-radius: 10px;
+    margin-bottom: 10px; /* Añade un margen inferior para separar la imagen de los párrafos */
+}
+
+.tarjeta p {
+    text-align: center;
+    margin: 5px 0; /* Ajusta el margen vertical de los párrafos según tus preferencias */
+}

@@ -1,0 +1,13 @@
+.padre-registro {
+    position: relative; 
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url("/images/fondo-login-china.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+

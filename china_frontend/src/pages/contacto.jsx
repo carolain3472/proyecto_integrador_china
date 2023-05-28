@@ -1,5 +1,11 @@
 import { Nav_bar } from "../components/nav-bar";
 
+/**
+ * Componente de contacto.
+ * 
+ * Este componente muestra la interfaz de contacto
+ * 
+ */
 
 
 export function Contacto() {
