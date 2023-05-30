@@ -9,16 +9,16 @@ import {Sobre_nosotros} from './pages/sobre_nosotros'
 import {FYI} from './pages/fyi'
 import {Contacto} from './pages/contacto'
 import {Ajustes} from './pages/ajustes'
-import {Historia} from './pages/historia'
-import {Cultura} from './pages/cultura'
-import {Contribuciones} from './pages/contribuciones'
+import {Historia} from './pages/historia/historia'
+import {Cultura} from './pages/cultura/cultura'
+import {Contribuciones} from './pages/contribuciones/contribuciones'
 import {Minijuegos} from './pages/minijuegos'
 
 
 
 
 function App() {
-  return (
+  return (cxccx
     <BrowserRouter>
 
     <Routes>

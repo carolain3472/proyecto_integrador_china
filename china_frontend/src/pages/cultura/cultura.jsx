@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Nav_bar_perfil } from "../components/nav-bar-perfil";
+import { Nav_bar_perfil } from "../../components/nav-bar-perfil";
 import "../scss/user_profile_style.css";
 import "../scss/boton_toggler_style.css";
 
