@@ -18,6 +18,7 @@ from rest_framework import status
 from rest_framework.response import Response
 from rest_framework.exceptions import AuthenticationFailed
 from rest_framework.permissions import AllowAny
+from django.core.mail import send_mail
 
 from .serializer import UsuarioSerializer
 from rest_framework import viewsets
@@ -184,3 +185,20 @@ class RegisterUserView(APIView):
             return Response(status=status.HTTP_200_OK)
         except:
              return Response(status=status.HTTP_404_NOT_FOUND)
+
+class ContactUsView(APIView):
+    def post(self, request, format=None):
+        nombre = request.data.get('nombre')
+        email = request.data.get('email')
+        message = request.data.get('message')
+
+        # Envía el correo electrónico
+        send_mail(
+            'Nuevo mensaje de contacto',
+            f'Nombre: {nombre}\nEmail: {email}\nMensaje: {message}',
+            email,  # Utiliza el campo 'email' como el remitente del correo electrónico
+            ['carolain403@gmail.com'],  # Destinatario del correo electrónico
+            fail_silently=False,
+        )
+
+        return Response({'valid': True})
