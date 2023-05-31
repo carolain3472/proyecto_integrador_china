@@ -1,7 +1,10 @@
 import { useState } from "react";
 import { Nav_bar_perfil } from "../../components/nav-bar-perfil";
-import "../scss/user_profile_style.css";
-import "../scss/boton_toggler_style.css";
+import "../../scss/user_profile_style.css";
+import "../../scss/boton_toggler_style.css";
+import { Button, Modal } from "react-bootstrap";
+import Experience from "../../components/Experience"
+import { Canvas } from '@react-three/fiber'
 
 export function Cultura() {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
@@ -16,6 +19,27 @@ export function Cultura() {
   const toggleSidebar = () => {
     setIsSidebarOpen(!isSidebarOpen);
   };
+
+
+  const [showModal, setShowModal] = useState(false);
+
+    /**
+  * Abre el modal.
+  * Actualiza el estado 'showModal' a true para mostrar el modal.
+  */
+    const handleModalOpen = () => {
+      setShowModal(true);
+    };
+  
+    /**
+    * Cierra el modal.
+    * Actualiza el estado 'showModal' a false para ocultar el modal.
+    */
+    const handleModalClose = () => {
+      setShowModal(false);
+    };
+
+
 
   return (
     <>
@@ -55,6 +79,53 @@ export function Cultura() {
         </div>
 
       </main>
+
+      <div>
+                  <button className="btn" type="button" onClick={handleModalOpen}>
+                    ver modelo
+                  </button>
+                </div>
+
+
+                <div style={{ width: "100%", height: "100%" }}>
+      <Canvas
+        camera={{
+          fov: 45,
+          near: 0.1,
+          far: 200,
+          position: [-1, 7, 10],
+        }}
+      >
+        <Experience />
+      </Canvas>
+    </div>
+
+
+                <Modal show={showModal} onHide={handleModalClose} centered backdrop="static">
+  <Modal.Header>
+    <Modal.Title>Templo chino</Modal.Title>
+  </Modal.Header>
+  <Modal.Body>
+    <div style={{ width: "100%", height: "100%" }}>
+      <Canvas
+        camera={{
+          fov: 45,
+          near: 0.1,
+          far: 200,
+          position: [-1, 7, 10],
+        }}
+      >
+        <Experience />
+      </Canvas>
+    </div>
+  </Modal.Body>
+  <Modal.Footer>
+    <Button variant="secondary" onClick={handleModalClose}>
+      Cerrar
+    </Button>
+  </Modal.Footer>
+</Modal>
+
     </>
   );
 }
