@@ -18,7 +18,7 @@ import {Minijuegos} from './pages/minijuegos'
 
 
 function App() {
-  return (cxccx
+  return (
     <BrowserRouter>
 
     <Routes>
