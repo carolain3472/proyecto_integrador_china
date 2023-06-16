@@ -324,8 +324,9 @@ export function Vestimenta() {
           <Boton_next
             nombre="Creencias"
             imagen="/images/creencias-icono.png"
-            identificador={123}
+            identificador='cultura'
             href="/creencias"
+            categoria= "vestimenta"
           />
         </div>
       </main>

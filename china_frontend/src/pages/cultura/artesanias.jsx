@@ -203,8 +203,10 @@ export function Artesanias() {
           <Boton_next
             nombre="Festividades"
             imagen="/images/festividades-icono.png"
-            identificador={123}
+            identificador='cultura'
             href="/festividades"
+            categoria= 'artesanias'
+            
           />
         </div>
       </main>

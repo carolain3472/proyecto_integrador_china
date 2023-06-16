@@ -179,7 +179,8 @@ export function Imprenta() {
           <Boton_back
             nombre="Aportes"
             imagen="/images/icono-contribuciones.png"
-            identificador={123}
+            identificador='contribuciones'
+            categoria= 'imprenta'
             href="/ver-contribuciones"
           />
         </div>

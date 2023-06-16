@@ -165,8 +165,9 @@ export function Contribuciones() {
         <Boton_next
           nombre="Aportes"
           imagen="/images/icono-contribuciones.png"
-          identificador={123}
+          identificador='contribuciones'
           href="/ver-contribuciones"
+          categoria='datos_contribuciones'
         />
 
       </main>

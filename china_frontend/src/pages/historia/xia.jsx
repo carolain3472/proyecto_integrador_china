@@ -178,8 +178,9 @@ export function Din_Xia() {
           <Boton_back
             nombre="Dinastias"
             imagen="/images/dinastia-icono.png"
-            identificador={123}
+            identificador='historia'
             href="/dinastias"
+            categoria= 'xia'
           />
         </div>
       </div>

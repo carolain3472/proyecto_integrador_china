@@ -225,8 +225,9 @@ export function Din_Han() {
           <Boton_back
             nombre="Dinastias"
             imagen="/images/dinastia-icono.png"
-            identificador={123}
+            identificador= 'historia'
             href="/dinastias"
+            categoria= 'han'
           />
         </div>
       </div>

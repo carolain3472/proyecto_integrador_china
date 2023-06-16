@@ -219,7 +219,8 @@ export function Polvora() {
           <Boton_back
             nombre="Aportes"
             imagen="/images/icono-contribuciones.png"
-            identificador={123}
+            identificador='contribuciones'
+            categoria= 'polvora'
             href="/ver-contribuciones"
           />
         </div>

@@ -349,7 +349,8 @@ export function Papel() {
           <Boton_back
             nombre="Aportes"
             imagen="/images/icono-contribuciones.png"
-            identificador={123}
+            identificador='contribuciones'
+            categoria= 'papel'
             href="/ver-contribuciones"
           />
         </div>

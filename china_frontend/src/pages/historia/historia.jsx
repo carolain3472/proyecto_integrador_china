@@ -4,6 +4,8 @@ import { Nav_bar_perfil } from "../../components/nav-bar-perfil";
 import "../../scss/historia_style.css";
 import "../../scss/boton_toggler_style.css";
 import { Boton_next } from "../../components/boton-next";
+import axios from "axios";
+import { api } from "../../api/register_api";
 
 /**
  * Componente Historia.
@@ -25,6 +27,22 @@ export function Historia() {
   
   const toggleSidebar = () => {
     setIsSidebarOpen(!isSidebarOpen);
+  };
+
+  const handleSubmit = (nombre, categoria) => {
+
+    axios;
+      api.post('/china/progreso_historia1/', {
+      nombre: nombre,
+      categoria: categoria,
+    })
+      .then((response) => {
+        console.log('Se ha actualizado el progreso de la historia');
+        // Realizar acciones adicionales después de la actualización
+      })
+      .catch((error) => {
+        console.error('Error al actualizar el progreso de la historia', error);
+      });
   };
 
   return (
@@ -109,10 +127,12 @@ export function Historia() {
           </div>
 
             <Boton_next
+
               nombre="Dinastias"
               imagen="/images/dinastia-icono.png"
-              identificador={123}
+              identificador='historia'
               href="/dinastias"
+              categoria = 'datos'
             />
 
           {/*           <h2

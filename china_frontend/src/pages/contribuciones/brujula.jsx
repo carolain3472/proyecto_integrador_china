@@ -269,8 +269,9 @@ export function Brujula() {
           <Boton_back
             nombre="Aportes"
             imagen="/images/icono-contribuciones.png"
-            identificador={123}
+            identificador='contribuciones'
             href="/ver-contribuciones"
+            categoria='brujula'
           />
         </div>
       </div>
