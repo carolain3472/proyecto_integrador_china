@@ -1,0 +1,19 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;700&display=swap");
+
+.contenido-tradiciones {
+    display: flex;
+    flex-direction: column;
+    margin: 1rem;
+    text-align: justify;
+    font-family: "Noto Serif", serif;
+}
+
+.cultura-parrafo{
+    font-size: 1.3rem;
+    margin-left: 6rem;
+    margin-right: 6rem;
+    margin-bottom: 3rem;
+    margin-top: 5rem;
+}
+
+

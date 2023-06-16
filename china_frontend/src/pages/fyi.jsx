@@ -1,3 +1,4 @@
+import React from 'react';
 import { Nav_bar } from "../components/nav-bar";
 import "../scss/fyi_style.css";
 

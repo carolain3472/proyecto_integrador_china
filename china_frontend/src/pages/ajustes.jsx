@@ -1,3 +1,4 @@
+import React from 'react';
 import { useState } from "react";
 import { Update_china } from "../components/update_china";
 import { Nav_bar_perfil } from "../components/nav-bar-perfil";
@@ -31,7 +32,7 @@ export function Ajustes() {
     <>
       <button
         className={`boton-toggler ${isSidebarOpen ? "open" : ""}`}
-        style={{ marginLeft: isSidebarOpen ? "310px" : "0" }}
+        style={{ marginLeft: isSidebarOpen ? "310px" : "5px" }}
         onClick={toggleSidebar}
       >
         <span></span>

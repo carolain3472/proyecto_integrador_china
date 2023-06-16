@@ -1,10 +1,9 @@
+import React from 'react';
 import { Nav_bar } from "../components/nav-bar";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faMessage } from "@fortawesome/free-solid-svg-icons";
 import "../scss/contacto_style.css";
-import { api } from "../api/register_api";
-import React, { useState } from "react";
-import axios from "axios";
+
 /**
  * Componente de contacto.
  *
@@ -14,40 +13,6 @@ import axios from "axios";
  */
 
 export function Contacto() {
-
-  const [nombre, setNombre] = useState("");
-  const [email, setEmail] = useState("");
-  const [message, setMessage] = useState("");
-
-  const handleSubmit = (event) => {
-    event.preventDefault();
-    // Realiza una solicitud POST al servidor para el inicio de sesión
-    axios
-    api.post("/china/contact_us/", { nombre, email, message })
-      .then((response) => {
-        // Cuando la solicitud es exitosa
-        if (response.data.valid) {
-          console.log("El mensaje se envió con éxito")
-        } else {
-            console.log("No se pudo enviar el mensaje");
-          }
-      })
-  };
-
-  const handleNombreChange = (event) => {
-    setNombre(event.target.value);
-  };
-
-  const handleEmailChange = (event) => {
-    setEmail(event.target.value);
-  };
-
-  
-  const handleMessageChange = (event) => {
-    setMessage(event.target.value);
-  };
-
-
   return (
     <>
       <Nav_bar />
@@ -60,15 +25,13 @@ export function Contacto() {
             <h1>Contáctanos</h1>
           </div>
           <div className="formulario-contacto p-3 ">
-            <form onSubmit={handleSubmit}>
+            <form>
               <div className="form-group col-md-12 px-2 py-2 ">
                 <label htmlFor="name">Nombre</label>
                 <input
-                  type="text"
+                  type="email"
                   className="form-control"
                   id="name"
-                  value={nombre}
-                  onChange={handleNombreChange}
                   placeholder="Nombre Apellido"
                 />
               </div>
@@ -78,10 +41,7 @@ export function Contacto() {
                   type="email"
                   className="form-control"
                   id="email"
-                  name="email"
                   placeholder="name@example.com"
-                  value={email}
-                  onChange={handleEmailChange}
                 />
               </div>
               <div className="form-group col-md-12 px-2 py-2">
@@ -90,8 +50,6 @@ export function Contacto() {
                   className="form-control"
                   id="textArea"
                   rows="8"
-                  value={message}
-                  onChange={handleMessageChange}
                   style={{ resize: "none" }}
                 ></textarea>
               </div>

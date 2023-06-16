@@ -1,0 +1,30 @@
+.app {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.cards-container {
+  margin-top: 5rem;
+  width: 1000px;
+  height: 600px;
+}
+
+.tarjeta {
+  border-radius: 10px;
+  display: inline-block;
+  margin: 5px;
+  height: calc(200px - 10px);
+  width: calc(250px - 10px);
+  cursor: pointer;
+}
+
+.tarjeta:hover {
+  transform: scale(0.98);
+}
+
+.tarjeta-image {
+  border-radius: 10px;
+  height: calc(200px - 10px);
+  width: calc(250px - 10px);
+}

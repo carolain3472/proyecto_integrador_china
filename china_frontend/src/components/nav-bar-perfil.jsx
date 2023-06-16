@@ -1,3 +1,4 @@
+import React from 'react';
 import "../scss/nav_bar_perfil_style.css";
 import { Logout_china } from "../components/logout_china";
 import { NavLink } from "react-router-dom";

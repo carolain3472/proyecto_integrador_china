@@ -1,3 +1,4 @@
+import React from 'react';
 import {Formulario} from '../components/login_china';
 /**
  * Plantilla de inicio de sesión.

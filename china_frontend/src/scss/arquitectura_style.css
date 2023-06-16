@@ -1,0 +1,21 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;700&display=swap");
+
+.padre-arqui {
+  margin-top: 1.5rem;
+  font-family: "Noto Serif", serif;
+}
+
+.imagen-arqui {
+  display: flex;
+  border: 2px solid;
+  border-radius: 40px;
+  justify-content: center;
+  background-size: cover;
+  height: 950px;
+  width: 650px;
+}
+
+.parraf-arqui {
+  font-size: 1.2rem;
+  text-align: justify;
+}

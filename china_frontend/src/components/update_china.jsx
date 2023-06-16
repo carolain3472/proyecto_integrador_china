@@ -1,3 +1,4 @@
+
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
@@ -159,7 +160,7 @@ export function Update_china() {
 
   return (
     <>
-      <main>
+      <main className="formulario-settings">
         <div className="container custom-container">
           <div className="row d-flex justify-content-center align-items-center h-100">
             <div className="col-lg-10">

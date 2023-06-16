@@ -1,0 +1,122 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;700&display=swap");
+
+.cont-artesanias {
+  background-color: black;
+  font-family: "Noto Serif", serif;
+}
+
+.cont-img-pint {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.cont-pintu {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-right: 1rem;
+}
+
+.titulo-artesa {
+  color: white;
+  border-bottom: 2px solid;
+  text-align: center;
+  width: 65%;
+}
+
+.parraf-artesa {
+  color: white;
+  margin-top: 0.8rem;
+  text-align: justify;
+}
+
+.img-pint {
+  border-radius: 50%;
+  border: 8px solid;
+  border-color: white;
+  height: 350px;
+  width: 350px;
+}
+
+.cont-imagenes-row2 {
+  display: flex;
+  justify-content: center;
+  margin-top: 1.5rem;
+}
+
+.img-pint-2 {
+  border: 8px solid;
+  height: 400px;
+  width: 400px;
+  transition: 0.5s transform;
+}
+
+.img-pint-2:hover {
+    transform: scale(1.10);
+}
+
+
+.cont-mod-pintura {
+  display: flex;
+  justify-content: end;
+}
+
+.boton-pint {
+  background-color: white;
+  border-radius: 10px;
+  font-size: 1.5rem;
+  padding: 0.5rem;
+  width: 10%;
+  transition: 0.5s all;
+}
+
+.boton-pint:hover {
+  background-color: gray;
+}
+
+.cont-cerami {
+    background-color: rgba(209, 209, 209, 0.5);
+    border-radius: 20px;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.8);
+    font-family: "Noto Serif", serif;
+  }
+  
+  .cont-img-cerami {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .cont-cerami-2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-right: 1rem;
+  }
+  
+  .titulo-cerami {
+    color: rgb(0, 0, 0);
+    border-bottom: 2px solid;
+    text-align: center;
+    width: 65%;
+  }
+  
+  .parraf-cerami {
+    color: rgb(0, 0, 0);
+    margin-top: 0.8rem;
+    text-align: justify;
+  }
+  
+  .img-cer {
+    border-radius: 50%;
+    border: 8px solid;
+    border-color: rgb(0, 0, 0);
+    height: 350px;
+    width: 350px;
+  }
+
+  .cont-mod-cerami {
+    display: flex;
+    justify-content: start;
+  }

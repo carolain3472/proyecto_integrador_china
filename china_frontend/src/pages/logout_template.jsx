@@ -1,3 +1,4 @@
+import React from 'react';
 import { Logout_china } from "../components/logout_china"
 
 /**

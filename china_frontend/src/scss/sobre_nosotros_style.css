@@ -40,7 +40,7 @@
 }
 
 
-.tarjeta {
+.tarjeta-info {
     position: relative;
     border: 1px solid #ccc;
     border-radius: 10px;
@@ -54,18 +54,18 @@
     transition: transform 0.3s;
 }
 
-.tarjeta:hover {
+.tarjeta-info:hover {
     transform: scale(1.05);
 }
 
-.tarjeta img {
+.tarjeta-info img {
     width: 100%;
     height: 70%; /* Ajusta la altura automáticamente */
     border-radius: 10px;
     margin-bottom: 10px; /* Añade un margen inferior para separar la imagen de los párrafos */
 }
 
-.tarjeta p {
+.tarjeta-info p {
     text-align: center;
     margin: 5px 0; /* Ajusta el margen vertical de los párrafos según tus preferencias */
 }

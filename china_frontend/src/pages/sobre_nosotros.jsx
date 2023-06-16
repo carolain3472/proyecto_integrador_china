@@ -1,3 +1,4 @@
+import React from 'react';
 import { Nav_bar } from "../components/nav-bar";
 import "../scss/sobre_nosotros_style.css";
 
@@ -33,18 +34,18 @@ export function Sobre_nosotros() {
           <p className="team-aboutUs">conoce nuestro equipo</p>
         </div>
         <div className="contenedor-imagenes">
-          <div className="tarjeta text-white bg-dark">
+          <div className="tarjeta-info text-white bg-dark">
             <img className="profile-image-pic img-thumbnail" src="/images/carolainJimenez.jpeg" alt="Imagen 1" />
             <p>Carolain Jimenez Bedoya</p>
             <p style={{color: "grey"}}>Backend developer</p>
           </div>
-          <div className="tarjeta text-white bg-dark">
+          <div className="tarjeta-info text-white bg-dark">
             <img className="profile-image-pic img-thumbnail" src="/images/hernandoLopez.jpg" alt="Imagen 2" />
             <p>Hernando Lopez Rincon</p>
             <p style={{color: "grey"}}>Frontend developer</p>
           </div>
-          <div className="tarjeta text-white bg-dark">
-            <img className="profile-image-pic img-thumbnail" src="/images/nataliaLopez.jpg" alt="Imagen 3" />
+          <div className="tarjeta-info text-white bg-dark">
+            <img className="profile-image-pic img-thumbnail" src="/images/nataliaLopez.PNG" alt="Imagen 3" />
             <p>Natalia Lopez Osorio</p>
             <p style={{color: "grey"}}>Backend developer</p>
           </div>

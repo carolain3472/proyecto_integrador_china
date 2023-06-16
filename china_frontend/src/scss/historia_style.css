@@ -1,0 +1,94 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;700&display=swap");
+
+.contenedor-historia {
+  display: flex;
+  flex-direction: column;
+  transition: margin-left 0.1s ease;
+}
+
+.historia-titulo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-bottom: 2px solid;
+  border-top: 2px solid;
+  font-family: "Noto Serif", serif;
+}
+
+.contenido-historia {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: center;
+  margin-top: 0.5rem;
+  width: 100%;
+  font-family: "Noto Serif", serif;
+}
+
+.contenedor-hijo-Hist-izq {
+  margin-bottom: 0.5rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1rem;
+  width: 70%;
+  border-top-left-radius: 125px;
+  border-bottom-left-radius: 120px;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  box-shadow: -4px 4px 7px rgba(0, 0, 0, 0.4);
+  transition: transform 0.3s;
+}
+
+.contenedor-hijo-Hist-izq img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 200px;
+  width: 200px;
+  border-radius: 50%;
+}
+
+.contenedor-hijo-Hist-izq p {
+  padding-left: 9px;
+  padding-right: 9px;
+}
+
+.contenedor-hijo-Hist-der {
+  margin-bottom: 0.5rem;
+  background-color: rgba(240, 139, 139, 0.2);
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1rem;
+  width: 70%;
+  border-top-right-radius: 120px;
+  border-bottom-right-radius: 120px;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+  box-shadow: 4px 4px 7px rgba(0, 0, 0, 0.4);
+  transition: transform 0.3s;
+}
+
+.contenedor-hijo-Hist-der img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 200px;
+  width: 200px;
+  border-radius: 50%;
+}
+
+.contenedor-hijo-Hist-der p {
+  padding-left: 9px;
+  padding-right: 9px;
+}
+
+.contenedor-hijo-Hist-der:hover,
+.contenedor-hijo-Hist-izq:hover {
+  transform: scale(1.05);
+}
+
