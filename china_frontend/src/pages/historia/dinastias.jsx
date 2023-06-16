@@ -216,6 +216,8 @@ export function Dinastias() {
             imagen="/images/arquitectura-icono.png"
             identificador={123}
             href="/arquitectura"
+            categoria='None'
+           
           />
         </div>
       </main>

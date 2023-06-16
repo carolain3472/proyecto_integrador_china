@@ -174,7 +174,8 @@ export function Acupuntura() {
           <Boton_back
             nombre="Aportes"
             imagen="/images/icono-contribuciones.png"
-            identificador={123}
+            identificador='contribuciones'
+            categoria= 'acupuntura'
             href="/ver-contribuciones"
           />
         </div>

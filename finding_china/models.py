@@ -31,6 +31,39 @@ class CustomUser(AbstractUser):
     email = models.EmailField(null=False, unique=True, error_messages={
         'unique': 'Ya hay un usuario registrado con este email'})
     profile_picture = models.ImageField(upload_to='profile_pictures/', default="https://cdn-icons-png.flaticon.com/512/105/105544.png", max_length=500)
+
+    PROGRESO_DEFAULT = {
+        'datos': 0,
+        'xia': 0,
+        'shang': 0,
+        'zhou': 0,
+        'qin': 0,
+        'han': 0,
+        'arquitectura': 0
+    }
+
+    PROGRESO_CULTURA_DEFAULT = {
+        'datos_cultura': 0,
+        'tradiciones': 0,
+        'artesanias': 0,
+        'festividades': 0,
+        'vestimenta': 0,
+        'creencias': 0,
+    }
+
+    PROGRESO_CONTRIBUCIONES_DEFAULT = {
+        'datos_contribuciones': 0,
+        'brujula': 0,
+        'polvora': 0,
+        'papel': 0,
+        'imprenta': 0,
+        'acupuntura': 0,
+    }
+
+
+    progreso_historia = models.JSONField(default=PROGRESO_DEFAULT)
+    progreso_contribuciones= models.JSONField(default= PROGRESO_CONTRIBUCIONES_DEFAULT)
+    progreso_cultura = models.JSONField(default=PROGRESO_CULTURA_DEFAULT)
     
     total_quiz = models.IntegerField(default=0)
     total_categorias = models.CharField(default=' ')

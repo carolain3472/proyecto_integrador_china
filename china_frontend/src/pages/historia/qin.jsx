@@ -267,8 +267,9 @@ export function Din_Qin() {
           <Boton_back
             nombre="Dinastias"
             imagen="/images/dinastia-icono.png"
-            identificador={123}
+            identificador='historia'
             href="/dinastias"
+            categoria= 'qin'
           />
         </div>
       </div>

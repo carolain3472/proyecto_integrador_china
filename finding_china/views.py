@@ -93,6 +93,59 @@ class UpdateProfile(APIView):
             return Response(status=status.HTTP_404_NOT_FOUND)
         
 
+class UpdateProgreso(APIView):
+    
+    def post(self, request):
+        username= request.data.get('nombre')
+        categoria= request.data.get('categoria')
+        identificador=request.data.get('identificador')
+
+        
+        # Buscar al usuario por nombre de usuario en la base de datos
+        user = CustomUser.objects.get(username=username)
+        token_exists = Token.objects.filter(user=user).exists()
+   
+
+        if token_exists:
+
+            if categoria=='None':
+                return Response(status=status.HTTP_202_ACCEPTED)
+            
+            if categoria==None:
+                return Response(status=status.HTTP_202_ACCEPTED)
+             
+            if identificador=='historia':
+                if user.progreso_historia[categoria]==0:
+                    user.progreso_historia[categoria]=1
+                    print(user.progreso_historia[categoria])
+                    user.save()
+                print(user.progreso_historia)
+                return Response(status=status.HTTP_200_OK)
+
+            
+            if identificador=='cultura':
+                if user.progreso_cultura[categoria]==0:
+                    user.progreso_cultura[categoria]=1
+                    print(user.progreso_cultura[categoria])
+                    user.save()
+                print(user.progreso_cultura)
+                return Response(status=status.HTTP_200_OK)
+            
+            if identificador=='contribuciones':
+                if user.progreso_contribuciones[categoria]==0:
+                    user.progreso_contribuciones[categoria]=1
+                    print(user.progreso_contribuciones[categoria])
+                    user.save()
+                print(user.progreso_contribuciones)
+                return Response(status=status.HTTP_200_OK)
+
+            return Response(status=status.HTTP_200_OK)
+
+            
+       
+            
+        return Response(status=status.HTTP_401_UNAUTHORIZED)
+
 class UpdateContraseña(APIView):
     def post(self, request):
         username= request.data.get('username')
@@ -128,6 +181,7 @@ class LoginView(APIView):
         try:
             # Buscar al usuario por cédula en la base de datos
             usuario = CustomUser.objects.get(username=username)
+            print(usuario.progreso_historia)
 
             # Verificar la contraseña del usuario
             if usuario.check_password(password):
@@ -136,6 +190,7 @@ class LoginView(APIView):
                 if user is not None:
                     login(request, user)
                     token, _ = Token.objects.get_or_create(user=user)
+                    
 
         
 
@@ -144,8 +199,11 @@ class LoginView(APIView):
                         'username': user.username,
                         'email': user.email,
                         'profile_picture': user.profile_picture.url if user.profile_picture else None,
+    
                         # Agrega más campos de información del usuario si es necesario
                     }
+
+                    
                   
                 
                     return Response({'valid': True, 'token': token.key, 'user': user_data})

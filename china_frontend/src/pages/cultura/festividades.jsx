@@ -157,8 +157,9 @@ export function Festividades() {
           <Boton_next
             nombre="Vestimenta"
             imagen="/images/vestimenta-icono.png"
-            identificador={123}
+            identificador='cultura'
             href="/vestimenta"
+            categoria= "festividades"
           />
         </div>
       </main>

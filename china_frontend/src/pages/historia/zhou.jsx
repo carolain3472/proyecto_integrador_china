@@ -197,8 +197,9 @@ export function Din_Zhou() {
           <Boton_back
             nombre="Dinastias"
             imagen="/images/dinastia-icono.png"
-            identificador={123}
+            identificador='historia'
             href="/dinastias"
+            categoria= 'zhou'
           />
         </div>
       </div>

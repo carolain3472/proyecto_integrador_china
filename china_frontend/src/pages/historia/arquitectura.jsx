@@ -280,8 +280,9 @@ export function Arquitectura() {
           <Boton_next
             nombre="Historia"
             imagen="/images/historia-icono.png"
-            identificador={123}
+            identificador= 'historia'
             href="/historia"
+            categoria= 'None'
           />
         </div>
       </main>
