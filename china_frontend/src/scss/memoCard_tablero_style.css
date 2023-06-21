@@ -1,11 +1,14 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;700&display=swap");
+
 .app {
   display: flex;
   justify-content: center;
   align-items: center;
+  font-family: "Noto Serif", serif;
 }
 
 .cards-container {
-  margin-top: 5rem;
+  margin-top: 2rem;
   width: 1000px;
   height: 600px;
 }
@@ -24,7 +27,68 @@
 }
 
 .tarjeta-image {
+  border: 1px solid;
   border-radius: 10px;
   height: calc(200px - 10px);
   width: calc(250px - 10px);
+}
+
+.game-complete-message {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 15rem;
+}
+
+.fin-juego {
+  font-size: 5rem;
+  animation: color-tamano 05s alternate infinite;
+}
+
+@keyframes color-tamano {
+  0% {
+    color: rgb(0, 128, 75);
+    scale: 1;
+  }
+  50% {
+    color: green;
+    scale: 1.05;
+  }
+  100% {
+    color: rgb(0, 128, 75);
+    scale: 1;
+  }
+}
+
+.game-over-message {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 15rem;
+}
+
+.fin-juego-perd {
+  text-align: center;
+  font-size: 5rem;
+  animation: color-tamano-per 05s alternate infinite;
+}
+
+@keyframes color-tamano-per {
+  0% {
+    color: rgb(255, 71, 71);
+    scale: 1;
+  }
+  50% {
+    color: red;
+    scale: 1.05;
+  }
+  100% {
+    color: rgb(255, 71, 71);
+    scale: 1;
+  }
+}
+
+.score-time {
+  font-size: 2rem;
+  margin-top: 1rem;
 }

@@ -26,7 +26,7 @@ urlpatterns = [
     path('china/', include(('finding_china.urls', 'default'))),
     path('api_generate_token/', views.obtain_auth_token), #SOlo es aceptado por el método post
     path('login_user/',Login.as_view(), name = 'login'),
-    path('logout/', Logout.as_view()),
+    path('logout/', Logout.as_view(), name="logout"),
     path('update/',UpdateProfile.as_view(), name='update'),
 
 

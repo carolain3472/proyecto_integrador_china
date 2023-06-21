@@ -282,7 +282,7 @@ export function Arquitectura() {
             imagen="/images/historia-icono.png"
             identificador= 'historia'
             href="/historia"
-            categoria= 'None'
+            categoria= 'arquitectura'
           />
         </div>
       </main>

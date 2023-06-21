@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/4.2/ref/settings/
 """
 
 from pathlib import Path
+import os
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -25,7 +26,7 @@ SECRET_KEY = 'django-insecure-_q*qvi^#b!r*)r#0h05@ix+k^ljhlsh=95(=j))je!+1iuywvo
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['NataliaLopez23.pythonanywhere.com', '127.0.0.1']
 
 
 # Application definition
@@ -75,6 +76,7 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'china.wsgi.application'
 
+CORS_ALLOW_ALL_ORIGINS = True
 
 # Database
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
@@ -89,6 +91,7 @@ DATABASES = {
         'DATABASE_PORT' : '5432',
 }
 }
+
 
 AUTH_USER_MODEL = 'finding_china.CustomUser'
 
@@ -134,17 +137,9 @@ STATIC_URL = 'static/'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-CORS_ALLOWED_ORIGINS = [ 'http://localhost:5173' ]
+
 
 REST_FRAMEWORK = {
     'DEFAULT_SCHEMA_CLASS': 'rest_framework.schemas.coreapi.AutoSchema',
 }
 
-
-EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
-EMAIL_HOST = 'smtp.gmail.com'
-EMAIL_PORT = 587
-EMAIL_USE_TLS = True
-EMAIL_HOST_USER = 'carolain403@gmail.com'
-EMAIL_HOST_PASSWORD = 'Carolain2023'
-DEFAULT_FROM_EMAIL = EMAIL_HOST_USER
