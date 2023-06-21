@@ -3,6 +3,7 @@
 .contenedor-perfil {
   display: flex;
   flex-direction: column;
+  font-family: "Noto Serif", serif;
   transition: margin-left 0.1s ease;
 }
 
@@ -31,4 +32,95 @@
   justify-content: center;
   margin-top: 10px;
   width: 100%;
+}
+
+.nombre-user {
+  animation: tamano-user 05s infinite alternate;
+  font-size: 1.3rem;
+}
+
+.foto-user {
+  border: 1px solid;
+  border-radius: 50%;
+  height: 280px;
+  padding: 5px;
+  width: auto;
+}
+
+.info-profile {
+  font-size: 1.2rem;
+  text-align: justify;
+}
+
+@keyframes tamano-user {
+  0% {
+    scale: 1;
+  }
+  50% {
+    scale: 1.1;
+  }
+  100%{
+    scale: 1;
+  }
+}
+
+.perfil-column {
+  align-items: center;
+  background-color: rgba(160, 160, 160, 0.6);
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-top: 1rem;
+  padding: 30px;
+}
+
+.bton-quiz {
+  background-color: rgb(236, 236, 236);
+  border: none;
+  border-radius: 20px;
+  box-shadow: 0 0 7px rgba(0, 0, 0, 0.5);
+  font-size: 2rem;
+  padding-left: 20px;
+  padding-right: 20px;
+  transition: 0.5s transform, 0.5s background-color;
+}
+
+.bton-quiz:hover {
+  background-color: rgb(250, 225, 225);
+  transform: scale(1.05);
+}
+
+
+
+.perfil-column h2 {
+  border-bottom: 1px solid;
+  border-top: 1px solid;
+  font-size: 2.3rem;
+  margin-top: 50px;
+}
+
+
+.acierto {
+  color: rgb(0, 128, 75);
+  font-size: 1.8rem;
+  margin-top: 50px;
+  margin-left: 10px;
+}
+
+.acierto img{
+  height: 30px;
+  width: auto;
+}
+
+.fallos {
+  color: rgb(173, 0, 0);
+  font-size: 1.8rem;
+  margin-top: 50px;
+  margin-left: 10px;
+}
+
+.fallos img{
+  height: 30px;
+  width: auto;
 }

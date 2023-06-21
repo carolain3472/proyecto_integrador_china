@@ -5,8 +5,8 @@ from .views import LoginView
 from .views import RegisterUserView
 from .views import UpdateProfile
 from .views import UpdateContraseña
-from .views import ContactUsView
 from .views import UpdateProgreso
+from .views import getProgreso
 
 
 from rest_framework.documentation import include_docs_urls
@@ -24,8 +24,9 @@ urlpatterns = [
     path('register/', RegisterUserView.as_view(), name='register'),
     path('editProfile/' ,UpdateProfile.as_view(), name='editProfile'),
     path('update_contra/',UpdateContraseña.as_view(), name='update_contra'),
-    path('contact_us/',ContactUsView.as_view(), name='contact_us'),
     path('progreso_historia1/',UpdateProgreso.as_view(), name='update_progreso'),
+    path('get_progreso/',getProgreso.as_view(), name='get_progreso'),
+
 
 
 ]
